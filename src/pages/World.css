@@ -1,0 +1,132 @@
+.world-page {
+    background-color: var(--color-bg-primary);
+}
+
+/* Hero */
+.world-hero {
+    text-align: center;
+    background: linear-gradient(135deg,
+            var(--color-bg-primary) 0%,
+            var(--color-bg-secondary) 100%);
+    padding: 140px 0 140px;
+}
+
+.world-hero h1 {
+    color: var(--color-accent-gold);
+    margin-bottom: var(--spacing-md);
+}
+
+.world-intro {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    color: var(--color-text-primary);
+    margin-bottom: var(--spacing-sm);
+    font-style: italic;
+}
+
+.world-description {
+    font-size: clamp(1.1rem, 1.8vw, 1.3rem);
+    color: var(--color-text-secondary);
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.9;
+}
+
+/* Destinations */
+.destinations-section {
+    background-color: var(--color-bg-secondary);
+}
+
+.destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--spacing-md);
+    margin: var(--spacing-xl) 0;
+}
+
+.destination-card {
+    padding: var(--spacing-lg);
+    border: 1px solid var(--color-border);
+    background: var(--color-bg-primary);
+    transition: all 0.4s ease;
+}
+
+.destination-card:hover {
+    border-color: var(--color-accent-gold);
+    transform: translateY(-5px);
+    background: linear-gradient(135deg,
+            rgba(212, 175, 55, 0.03) 0%,
+            rgba(10, 10, 10, 1) 100%);
+}
+
+.destination-card h3 {
+    font-size: clamp(1.5rem, 2.5vw, 1.9rem);
+    color: var(--color-accent-gold);
+    margin-bottom: var(--spacing-xs);
+    font-weight: 400;
+}
+
+.destination-card p {
+    font-size: 1rem;
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+}
+
+.destinations-note {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--color-text-secondary);
+    margin-top: var(--spacing-xl);
+    font-style: italic;
+}
+
+.destinations-note em {
+    color: var(--color-accent-gold);
+    font-style: italic;
+}
+
+/* Beyond Borders */
+.beyond-section {
+    background: linear-gradient(to bottom,
+            var(--color-bg-primary) 0%,
+            var(--color-bg-secondary) 100%);
+    text-align: center;
+}
+
+.beyond-section h2 {
+    color: var(--color-text-primary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.beyond-subtitle {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    color: var(--color-accent-gold);
+    font-weight: 300;
+    margin-bottom: var(--spacing-lg);
+}
+
+.beyond-content {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.beyond-content p {
+    font-size: clamp(1.1rem, 1.8vw, 1.3rem);
+    line-height: 2;
+}
+
+.beyond-closing {
+    margin-top: var(--spacing-lg);
+    font-style: italic;
+    color: var(--color-accent-bronze);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .destinations-grid {
+        grid-template-columns: 1fr;
+    }
+}

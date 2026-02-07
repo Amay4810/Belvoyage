@@ -1,0 +1,118 @@
+/* Philosophy Page Styles */
+
+.philosophy-page {
+    background-color: var(--color-bg-primary);
+}
+
+/* The BelVoyage Approach */
+.belvoyage-approach {
+    background-color: var(--color-bg-secondary);
+}
+
+.approach-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-xl);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.approach-item {
+    text-align: center;
+    padding: var(--spacing-lg);
+}
+
+.approach-item h3 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--color-accent-gold);
+    margin-bottom: var(--spacing-md);
+    font-weight: 500;
+}
+
+.approach-item p {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: var(--color-text-secondary);
+}
+
+/* Target Audience */
+.target-audience {
+    background-color: var(--color-bg-primary);
+    text-align: center;
+}
+
+.audience-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.intro-text {
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-lg);
+    color: var(--color-text-secondary);
+}
+
+.audience-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    text-align: left;
+}
+
+.audience-list li {
+    font-size: 1.1rem;
+    color: var(--color-text-primary);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.audience-list li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent-gold);
+    font-weight: 500;
+}
+
+/* Global Network */
+.global-network {
+    background-color: var(--color-bg-secondary);
+    text-align: center;
+}
+
+.network-content {
+    max-width: 850px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.network-content p {
+    font-size: 1.1rem;
+    line-height: 2;
+    color: var(--color-text-secondary);
+}
+
+.closing-statement {
+    margin-top: var(--spacing-lg);
+    font-style: italic;
+    color: var(--color-accent-bronze);
+    font-size: 1.15rem !important;
+    line-height: 1.8 !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .approach-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+
+    .approach-item {
+        padding: var(--spacing-md);
+    }
+}

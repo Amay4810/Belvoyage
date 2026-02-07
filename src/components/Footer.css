@@ -1,0 +1,106 @@
+.footer {
+    background-color: var(--color-bg-secondary);
+    padding: var(--spacing-lg) 0 var(--spacing-md);
+    border-top: 1px solid var(--color-border);
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+/* Main Footer */
+.footer-main {
+    text-align: center;
+    padding-bottom: var(--spacing-md);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.footer-tagline {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-weight: 300;
+    color: var(--color-accent-gold);
+    margin-bottom: var(--spacing-sm);
+}
+
+.footer-subtitle {
+    font-size: 1rem;
+    color: var(--color-text-secondary);
+    font-style: italic;
+}
+
+/* Footer Links */
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+    padding: var(--spacing-md) 0;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.footer-col h4 {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-text-primary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.footer-col a,
+.footer-col p {
+    font-size: 0.95rem;
+    color: var(--color-text-secondary);
+    transition: color 0.3s ease;
+    line-height: 1.8;
+}
+
+.footer-col a:hover {
+    color: var(--color-accent-gold);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.footer-legal,
+.footer-copyright {
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+}
+
+.footer-legal {
+    font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer {
+        padding: var(--spacing-lg) 0 var(--spacing-md);
+    }
+
+    .footer-links {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: var(--spacing-md);
+    }
+
+    .footer-col {
+        align-items: center;
+    }
+}

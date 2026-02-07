@@ -1,0 +1,219 @@
+/* Consultation Page - BelVoyage Theme */
+
+.consultation-page {
+    min-height: 100vh;
+    background-color: var(--color-bg-primary);
+}
+
+.consultation-hero {
+    padding: 140px 0 140px;
+    text-align: center;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.consultation-hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 300;
+    color: var(--color-text-primary);
+    margin-bottom: var(--spacing-sm);
+    letter-spacing: 0.02em;
+}
+
+.consultation-intro {
+    font-size: clamp(1rem, 1.5vw, 1.125rem);
+    color: var(--color-text-secondary);
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Form Section */
+.form-section {
+    padding: var(--spacing-xl) 0;
+}
+
+.consultation-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--color-text-primary);
+    letter-spacing: 0.02em;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    font-size: 0.95rem;
+    font-family: var(--font-body);
+    background-color: rgba(26, 26, 26, 0.5);
+    color: var(--color-text-primary);
+    transition: all 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--color-text-secondary);
+    opacity: 0.5;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-accent-gold);
+    background-color: rgba(212, 175, 55, 0.05);
+}
+
+.form-group input.error,
+.form-group select.error,
+.form-group textarea.error {
+    border-color: #d43737;
+}
+
+.error-message {
+    font-size: 0.85rem;
+    color: #ff6b6b;
+    font-style: italic;
+    margin-top: 4px;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+    line-height: 1.6;
+}
+
+.form-group select {
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23d4af37' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-size: 12px;
+    appearance: none;
+}
+
+.form-group select option {
+    background-color: var(--color-bg-secondary);
+    color: var(--color-text-primary);
+    padding: 10px;
+}
+
+.form-submit {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    margin-top: var(--spacing-md);
+}
+
+.form-submit button {
+    min-width: 280px;
+    padding: 14px 40px;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--color-bg-primary);
+    background-color: var(--color-accent-gold);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form-submit button:hover {
+    background-color: #c9a959;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+}
+
+.form-submit button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Success Message */
+.success-message {
+    grid-column: 1 / -1;
+    padding: var(--spacing-md);
+    background-color: rgba(212, 175, 55, 0.1);
+    border: 1px solid var(--color-accent-gold);
+    border-radius: 4px;
+    text-align: center;
+    margin-top: var(--spacing-md);
+}
+
+.success-message p {
+    color: var(--color-text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.success-message p:last-child {
+    margin-bottom: 0;
+    color: var(--color-text-secondary);
+}
+
+/* Error Message Box */
+.error-message-box {
+    grid-column: 1 / -1;
+    padding: var(--spacing-md);
+    background-color: rgba(212, 67, 55, 0.1);
+    border: 1px solid #8b0000;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: var(--spacing-md);
+}
+
+.error-message-box p {
+    color: #ff6b6b;
+    margin-bottom: 0.5rem;
+}
+
+.error-message-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .consultation-form {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+    }
+
+    .form-group.full-width {
+        grid-column: 1;
+    }
+
+    .form-submit {
+        grid-column: 1;
+    }
+
+    .form-submit button {
+        width: 100%;
+        min-width: unset;
+    }
+}

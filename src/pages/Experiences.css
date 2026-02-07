@@ -1,0 +1,56 @@
+.experiences-page {
+    background-color: var(--color-bg-primary);
+}
+
+/* Hero */
+.experiences-hero {
+    text-align: center;
+    background: linear-gradient(135deg,
+            var(--color-bg-primary) 0%,
+            var(--color-bg-secondary) 100%);
+    padding: 140px 0 140px;
+}
+
+.experiences-hero-title {
+    color: var(--color-accent-gold);
+    margin-bottom: var(--spacing-md);
+    font-weight: 300;
+}
+
+.experiences-hero-subtitle {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    color: var(--color-text-primary);
+    margin-bottom: var(--spacing-sm);
+    font-style: italic;
+}
+
+.experiences-hero-description {
+    font-size: clamp(1.1rem, 1.8vw, 1.3rem);
+    color: var(--color-text-secondary);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* Grid - Display experience cards in 2 column grid */
+.experiences-grid-section {
+    background-color: var(--color-bg-primary);
+}
+
+.experiences-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-xl);
+}
+
+/* Override experience card to be full width within grid */
+.experiences-grid .experience-card {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .experiences-grid {
+        grid-template-columns: 1fr;
+    }
+}

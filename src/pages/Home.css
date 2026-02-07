@@ -1,0 +1,136 @@
+/* Home Page Specific Styles */
+
+.home-page {
+    background-color: var(--color-bg-primary);
+}
+
+/* Opening Statement */
+.opening-statement {
+    background-color: var(--color-bg-secondary);
+    text-align: center;
+}
+
+.section-title {
+    color: var(--color-accent-gold);
+    margin-bottom: var(--spacing-xl);
+    text-align: center;
+}
+
+.opening-content {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.opening-content p {
+    font-size: clamp(1.1rem, 1.8vw, 1.3rem);
+    line-height: 2;
+    color: var(--color-text-secondary);
+}
+
+/* Indented blocks for visual hierarchy */
+.opening-content .indented-block {
+    margin-left: 4rem;
+    font-style: italic;
+    color: var(--color-accent-bronze);
+}
+
+.opening-content .emphasis {
+    font-weight: 500;
+    color: var(--color-text-primary);
+}
+
+.opening-content strong {
+    color: var(--color-text-primary);
+    font-weight: 500;
+}
+
+.statement-closing {
+    margin-top: var(--spacing-lg);
+    font-style: italic;
+    color: var(--color-accent-bronze);
+    font-size: 1.2rem !important;
+    line-height: 1.8 !important;
+}
+
+@media (max-width: 768px) {
+    .opening-content .indented-block {
+        margin-left: 2rem;
+    }
+}
+
+/* Experience Tiles Section */
+.experience-tiles-section {
+    background-color: var(--color-bg-primary);
+}
+
+.tiles-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.tiles-cta {
+    text-align: center;
+    margin-top: var(--spacing-lg);
+}
+
+/* Philosophy Highlight */
+.philosophy-highlight {
+    background: linear-gradient(135deg,
+            var(--color-bg-primary) 0%,
+            var(--color-bg-secondary) 100%);
+    text-align: center;
+    padding: var(--spacing-xxl) 0;
+}
+
+.philosophy-text {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 300;
+    line-height: 1.5;
+    color: var(--color-text-primary);
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.philosophy-text em {
+    color: var(--color-accent-gold);
+    font-style: italic;
+}
+
+/* CTA Section */
+.cta-section {
+    text-align: center;
+    background-color: var(--color-bg-primary);
+    padding: var(--spacing-xxl) 0;
+}
+
+.cta-section h3 {
+    color: var(--color-text-primary);
+    margin-bottom: var(--spacing-md);
+}
+
+.cta-section p {
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .statement-content {
+        gap: var(--spacing-sm);
+    }
+
+    .philosophy-text {
+        font-size: clamp(1.5rem, 8vw, 2.5rem);
+    }
+
+    .cta-section {
+        padding: var(--spacing-lg) 0;
+    }
+}

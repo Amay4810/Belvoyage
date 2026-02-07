@@ -1,0 +1,170 @@
+/* About Page Styles */
+
+.about-page {
+    background-color: var(--color-bg-primary);
+}
+
+.about-hero {
+    background: var(--color-bg-secondary);
+    padding: 140px 0 40px;
+    text-align: center;
+}
+
+.about-hero h1 {
+    color: var(--color-accent-gold);
+}
+
+/* Founder Section */
+.founder-section {
+    background-color: var(--color-bg-secondary);
+    padding: var(--spacing-md) 0 var(--spacing-xxl);
+}
+
+.founder-content {
+    max-width: 850px;
+    margin: 0 auto 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.founder-content p {
+    font-size: 1.1rem;
+    line-height: 2;
+    color: var(--color-text-secondary);
+    text-align: center;
+}
+
+.founder-content strong {
+    color: var(--color-text-primary);
+    font-weight: 500;
+}
+
+/* Founder Quote */
+.founder-quote {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    padding: var(--spacing-xl);
+    border-left: 3px solid var(--color-accent-gold);
+    background: rgba(212, 175, 55, 0.03);
+}
+
+.founder-quote blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+.founder-quote blockquote p {
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: var(--color-text-primary);
+    font-style: italic;
+    margin-bottom: 1.25rem;
+}
+
+.founder-quote blockquote p:last-child {
+    margin-bottom: 0;
+}
+
+.quote-attribution {
+    margin-top: var(--spacing-lg);
+    font-size: 1rem;
+    color: var(--color-accent-gold);
+    font-weight: 500;
+    text-align: right;
+    font-style: normal;
+}
+
+.closing-line {
+    text-align: center;
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: var(--color-accent-bronze);
+    font-style: italic;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* FAQ Section */
+.faq-section {
+    background-color: var(--color-bg-primary);
+    padding: var(--spacing-xxl) 0;
+}
+
+.faq-container {
+    max-width: 900px;
+    margin: 0 auto 2.5rem;
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--color-border);
+    padding: 1.5rem 0;
+}
+
+.faq-question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    text-align: left;
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    color: var(--color-text-primary);
+    transition: color 0.3s ease;
+}
+
+.faq-question:hover {
+    color: var(--color-accent-gold);
+}
+
+.faq-icon {
+    font-size: 1.5rem;
+    color: var(--color-accent-gold);
+    margin-left: var(--spacing-md);
+    transition: transform 0.3s ease;
+}
+
+.faq-item.open .faq-icon {
+    transform: rotate(90deg);
+}
+
+.faq-answer {
+    overflow: hidden;
+}
+
+.faq-answer p {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: var(--color-text-secondary);
+    margin-bottom: 0.75rem;
+}
+
+.faq-answer p:last-child {
+    margin-bottom: 0;
+}
+
+.faq-cta {
+    text-align: center;
+    margin-top: var(--spacing-xl);
+}
+
+.faq-cta p {
+    font-size: 1.1rem;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-md);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .founder-quote {
+        padding: var(--spacing-md);
+    }
+
+    .faq-question {
+        font-size: 1.05rem;
+    }
+}
