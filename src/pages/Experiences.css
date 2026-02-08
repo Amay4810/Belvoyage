@@ -32,6 +32,7 @@
     font-size: clamp(1.5rem, 3vw, 2.5rem);
     color: var(--color-text-primary);
     margin-bottom: var(--spacing-sm);
+    margin-top: var(--spacing-md);
     font-style: italic;
 }
 
