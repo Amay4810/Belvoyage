@@ -36,13 +36,19 @@ If you used any environment variables (like for EmailJS), you need to add them h
 -   Click **"Environment Variables"**.
 -   Add keys like `VITE_EMAILJS_SERVICE_ID`, `VITE_EMAILJS_TEMPLATE_ID`, etc., and their values.
 
-## Step 4: Deploy
+## Step 5: Add Your Custom Domain
 
-1.  Click **"Deploy"**.
-2.  Vercel will start building your project. You can watch the logs.
-3.  Wait for a minute or two.
-4.  **Success!** You will see a "Congratulations!" screen with a preview of your live site.
-5.  Click the screenshot to visit your live URL (e.g., `belvoyage.vercel.app`).
+Once your site is deployed, you can add your `belvoyage.com` (or any other) domain:
+
+1.  Go to your project dashboard on Vercel.
+2.  Click the **Settings** tab at the top.
+3.  Click **Domains** in the left sidebar.
+4.  Enter your domain name (e.g., `belvoyage.com`) in the input field and click **Add**.
+5.  **Configure DNS**:
+    -   Vercel will show you the DNS records you need to add.
+    -   Log in to where you bought your domain (GoDaddy, Namecheap, Google Domains, etc.).
+    -   Add the **A Record** (usually pointing to `76.76.21.21`) and **CNAME Record** (usually `cname.vercel-dns.com`) as shown by Vercel.
+6.  Wait for propagation (usually minutes, sometimes up to 24 hours). Vercel will automatically generate an SSL certificate for HTTPS.
 
 ---
 
