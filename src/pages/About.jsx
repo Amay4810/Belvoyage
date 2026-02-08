@@ -85,20 +85,25 @@ const About = () => {
                         </p>
                     </div>
 
-                    {/* Founder Quote */}
-                    <div className="founder-quote">
-                        <blockquote>
-                            <p>
-                                "BelVoyage was born from the belief that truly exceptional journeys cannot be mass-produced.
-                            </p>
-                            <p>
-                                Every experience we create is looked at personally - with care, imagination, and an obsession for detail. Whether a journey is intimate or expansive, I remain closely involved in shaping what makes it meaningful.
-                            </p>
-                            <p>
-                                When a client travels with BelVoyage, they are not handed over to a system. They are entrusted to a vision - one I stand behind personally."
-                            </p>
-                        </blockquote>
-                        <p className="quote-attribution">— Amay Malhotra<br />Founder, BelVoyage</p>
+                    {/* Founder Feature */}
+                    <div className="founder-feature">
+                        <div className="founder-quote">
+                            <blockquote>
+                                <p>
+                                    "BelVoyage was born from the belief that truly exceptional journeys cannot be mass-produced.
+                                </p>
+                                <p>
+                                    Every experience we create is looked at personally - with care, imagination, and an obsession for detail. Whether a journey is intimate or expansive, I remain closely involved in shaping what makes it meaningful.
+                                </p>
+                                <p>
+                                    When a client travels with BelVoyage, they are not handed over to a system. They are entrusted to a vision - one I stand behind personally."
+                                </p>
+                            </blockquote>
+                            <p className="quote-attribution">Amay Malhotra<br />Founder, BelVoyage</p>
+                        </div>
+                        <div className="founder-image">
+                            <img src="/Headshot.jpeg" alt="Amay Malhotra, Founder of BelVoyage" />
+                        </div>
                     </div>
 
                     <p className="closing-line">

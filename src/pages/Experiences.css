@@ -11,6 +11,16 @@
     padding: 140px 0 140px;
 }
 
+.experiences-hero .hero-subtitle {
+    margin-top: var(--spacing-lg);
+    font-size: 1.25rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .experiences-hero-title {
     color: var(--color-accent-gold);
     margin-bottom: var(--spacing-md);

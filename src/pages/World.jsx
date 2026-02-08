@@ -24,7 +24,7 @@ const World = () => {
                         Where BelVoyage's expertise runs deep.
                     </p>
                     <p className="world-description">
-                        Certain destinations form the backbone of BelVoyage's work — places where relationships,
+                        Certain destinations form the backbone of BelVoyage's work - places where relationships,
                         cultural understanding, and on-ground presence allow journeys to unfold effortlessly.
                     </p>
                 </div>
@@ -61,19 +61,19 @@ const World = () => {
                             Beyond its Signature Destinations, BelVoyage designs journeys anywhere in the world.
                         </p>
                         <p>
-                            Clients may arrive with a destination — or simply a feeling they wish to experience. From there,
+                            Clients may arrive with a destination - or simply a feeling they wish to experience. From there,
                             BelVoyage identifies the right people, unlocks the right access, and designs something entirely
                             personal.
                         </p>
                         <p className="beyond-closing">
                             The world is not divided into "covered" and "uncovered" places.<br />
-                            Only into journeys designed with care — and those that are not.
+                            Only into journeys designed with care - and those that are not.
                         </p>
                     </div>
 
                     <div className="destinations-closing">
                         <p>
-                            Within these destinations, BelVoyage operates with fluency rather than familiarity — allowing journeys to feel instinctive, unforced, and deeply considered.
+                            Within these destinations, BelVoyage operates with fluency rather than familiarity - allowing journeys to feel instinctive, unforced, and deeply considered.
                         </p>
                     </div>
                 </div>

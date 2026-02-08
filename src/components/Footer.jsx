@@ -9,7 +9,7 @@ const Footer = () => {
             <div className="footer-content container">
                 {/* Main Footer Text */}
                 <div className="footer-main">
-                    <h3 className="footer-tagline">BelVoyage — The Art of Extraordinary Travel</h3>
+                    <h3 className="footer-tagline">BelVoyage - The Art of Extraordinary Travel</h3>
                     <p className="footer-subtitle">
                         Journeys curated privately and exclusively on request.
                     </p>

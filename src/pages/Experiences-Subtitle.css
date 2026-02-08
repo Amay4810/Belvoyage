@@ -1,0 +1,6 @@
+.experiences-hero .hero-subtitle {
+    margin-top: var(--spacing-lg);
+    font-size: 1.25rem;
+    color: var(--color-text-primary);
+    line-height: 1.6;
+}

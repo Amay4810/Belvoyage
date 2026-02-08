@@ -8,11 +8,11 @@ const Philosophy = () => {
             <HeroSection
                 headline={
                     <>
-                        We don't sell itineraries<br />
-                        We design journeys
+                        We don't sell Itineraries,<br />
+                        We design Journeys
                     </>
                 }
-                backgroundImage="/P.png"
+                backgroundImage="/Philosophy.jpeg"
             />
 
             {/* The BelVoyage Approach */}
@@ -41,7 +41,7 @@ const Philosophy = () => {
                             transition={{ duration: 0.6, delay: 0.1 }}
                             viewport={{ once: true }}
                         >
-                            <h3>Customisation AND Curation</h3>
+                            <h3>Customisation & Curation</h3>
                             <p>
                                 Every journey begins with intent, not destination. Nothing is pre-set. Nothing is assumed.
                             </p>

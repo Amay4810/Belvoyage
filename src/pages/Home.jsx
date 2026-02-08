@@ -8,7 +8,7 @@ const Home = () => {
         <div className="home-page">
             <HeroSection
                 logo="/logo.png"
-                subline="The art of extraordinary travel"
+                subline="The Art of Extraordinary Travel"
                 ctaText="Request a Private Consultation"
                 ctaLink="/consultation"
                 backgroundVideo="/video.mp4"
