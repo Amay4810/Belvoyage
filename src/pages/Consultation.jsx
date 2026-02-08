@@ -1,6 +1,7 @@
-import './Consultation.css';
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
+import { EMAILJS_CONFIG } from '../config/emailjs.config';
+import './Consultation.css';
 
 const Consultation = () => {
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
@@ -14,9 +15,9 @@ const Consultation = () => {
 
         // Prepare email data for EmailJS
         const emailData = {
-            service_id: 'service_ne3mn8j',
-            template_id: 'template_cwd3vjb',
-            user_id: 'nqcyoyW9gD0DN1rw1',
+            service_id: EMAILJS_CONFIG.SERVICE_ID,
+            template_id: EMAILJS_CONFIG.TEMPLATE_ID,
+            user_id: EMAILJS_CONFIG.PUBLIC_KEY,
             template_params: {
                 from_name: data.fullName,
                 from_email: data.email,

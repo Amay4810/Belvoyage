@@ -32,9 +32,19 @@ Vercel usually detects the settings automatically for Vite/React projects, but d
 -   **Install Command**: `npm install` (default).
 
 **Environment Variables**:
-If you used any environment variables (like for EmailJS), you need to add them here.
--   Click **"Environment Variables"**.
--   Add keys like `VITE_EMAILJS_SERVICE_ID`, `VITE_EMAILJS_TEMPLATE_ID`, etc., and their values.
+For the contact form to work, you must add these exact environment variables in Vercel:
+
+1.  Click **"Environment Variables"**.
+2.  Add the following key-value pairs (copy exactly):
+
+    *   **Key**: `VITE_EMAILJS_SERVICE_ID`
+        **Value**: `service_ne3mn8j`
+
+    *   **Key**: `VITE_EMAILJS_TEMPLATE_ID`
+        **Value**: `template_cwd3vjb`
+
+    *   **Key**: `VITE_EMAILJS_PUBLIC_KEY`
+        **Value**: `nqcyoyW9gD0DN1rw1`
 
 ## Step 5: Add Your Custom Domain
 

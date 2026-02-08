@@ -2,11 +2,11 @@
 // Get these values from your EmailJS dashboard at https://dashboard.emailjs.com/
 
 export const EMAILJS_CONFIG = {
-    SERVICE_ID: 'service_ne3mn8j',      // Replace with your EmailJS Service ID
-    TEMPLATE_ID: 'template_cwd3vjb',    // Replace with your EmailJS Template ID
-    PUBLIC_KEY: 'nqcyoyW9gD0DN1rw1',    // Replace with your EmailJS Public Key
+    SERVICE_ID: import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_ne3mn8j',
+    TEMPLATE_ID: import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_cwd3vjb',
+    PUBLIC_KEY: import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'nqcyoyW9gD0DN1rw1',
     OPTIONS: {
-        publicKey: 'nqcyoyW9gD0DN1rw1',
+        publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'nqcyoyW9gD0DN1rw1',
         // Add localhost to allowed origins
         origin: 'http://localhost:5173'
     }
