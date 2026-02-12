@@ -126,6 +126,10 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+    .world-hero {
+        padding: 180px 0 40px;
+    }
+
     .destinations-grid {
         grid-template-columns: 1fr;
     }

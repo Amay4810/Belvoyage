@@ -61,6 +61,10 @@
 }
 
 @media (max-width: 768px) {
+    .experiences-hero {
+        padding: 180px 0 40px;
+    }
+
     .experiences-grid {
         grid-template-columns: 1fr;
     }

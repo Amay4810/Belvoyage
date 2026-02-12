@@ -117,12 +117,12 @@ const Contact = () => {
                     <div className="contact-grid">
                         <div className="contact-item">
                             <h3>WhatsApp</h3>
-                            <a href="https://wa.me/919873124466">+91 98731 24466</a>
+                            <a href="https://wa.me/919319320069">+91 93193 20069</a>
                         </div>
 
                         <div className="contact-item">
                             <h3>Phone</h3>
-                            <a href="tel:+919873124466">+91 98731 24466</a>
+                            <a href="tel:+919319320069">+91 93193 20069</a>
                         </div>
 
                         <div className="contact-item">

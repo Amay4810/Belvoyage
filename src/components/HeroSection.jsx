@@ -21,6 +21,9 @@ const HeroSection = ({
                         loop
                         muted
                         playsInline
+                        preload="auto"
+                        disablePictureInPicture
+                        controls={false}
                         className="hero-video"
                     >
                         <source src={backgroundVideo} type="video/mp4" />

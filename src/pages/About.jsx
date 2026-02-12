@@ -46,11 +46,8 @@ const About = () => {
         {
             question: "Do you maintain client confidentiality?",
             answer: "Discretion is foundational to how BelVoyage operates.\n\nJourneys, identities, and personal moments are treated with absolute privacy.\n\nMany of our most meaningful experiences remain deliberately unseen."
-        },
-        {
-            question: "Do you maintain client confidentiality?",
-            answer: "Discretion is foundational to how BelVoyage operates.\n\nJourneys, identities, and personal moments are treated with absolute privacy.\n\nMany of our most meaningful experiences remain deliberately unseen."
         }
+       
     ];
 
     return (

@@ -182,6 +182,17 @@
 }
 
 @media (max-width: 768px) {
+    .header {
+        padding: 1.5rem 0;
+    }
+
+    .header.scrolled {
+        padding: 1rem 0;
+    }
+
+    .logo-image {
+        height: 80px;
+    }
 
     .desktop-nav,
     .header-cta {

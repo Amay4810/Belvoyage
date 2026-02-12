@@ -10,7 +10,7 @@ const World = () => {
         { name: 'Japan', description: 'Ritual, precision, tradition, and contemporary culture' },
         { name: 'Bali', description: 'Design-led wellness and private sanctuaries' },
         { name: 'Croatia', description: 'Islands, yachting, understated elegance' },
-        { name: 'Maldives', description: 'Privacy, architecture, ocean worlds' },
+        { name: 'Maldives', description: 'Private beaches, turquoise lagoons, island seclusion' },
         { name: 'Romania', description: "Castles, forests, folklore, Europe's last secrets" },
     ];
 
@@ -71,11 +71,7 @@ const World = () => {
                         </p>
                     </div>
 
-                    <div className="destinations-closing">
-                        <p>
-                            Within these destinations, BelVoyage operates with fluency rather than familiarity - allowing journeys to feel instinctive, unforced, and deeply considered.
-                        </p>
-                    </div>
+                    
                 </div>
             </section>
         </div>

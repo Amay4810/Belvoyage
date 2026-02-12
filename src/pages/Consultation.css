@@ -199,6 +199,10 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+    .consultation-hero {
+        padding: 180px 0 40px;
+    }
+
     .consultation-form {
         grid-template-columns: 1fr;
         gap: var(--spacing-sm);

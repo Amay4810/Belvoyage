@@ -201,6 +201,10 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+    .about-hero {
+        padding: 180px 0 30px;
+    }
+
     .founder-quote {
         padding: var(--spacing-md);
     }
