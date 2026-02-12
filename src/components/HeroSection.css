@@ -24,6 +24,34 @@
     object-fit: cover;
 }
 
+.hero-video {
+    pointer-events: none;
+    /* Prevents clicking to pause */
+}
+
+/* Hide native play button on WebKit browsers (iOS Safari) */
+.hero-video::-webkit-media-controls-start-playback-button {
+    display: none !important;
+    -webkit-appearance: none;
+}
+
+/* Hide all native video controls */
+.hero-video::-webkit-media-controls {
+    display: none !important;
+}
+
+.hero-video::-webkit-media-controls-enclosure {
+    display: none !important;
+}
+
+.hero-video::-webkit-media-controls-panel {
+    display: none !important;
+}
+
+.hero-video::-webkit-media-controls-panel {
+    display: none !important;
+}
+
 .hero-image {
     background-size: cover;
     background-position: center;

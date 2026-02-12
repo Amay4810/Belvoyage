@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import './HeroSection.css';
 
@@ -11,19 +12,64 @@ const HeroSection = ({
     backgroundImage,
     backgroundVideo
 }) => {
+    const videoRef = useRef(null);
+    const [hasInteracted, setHasInteracted] = useState(false);
+
+    useEffect(() => {
+        const video = videoRef.current;
+        if (!video || !backgroundVideo) return;
+
+        // Attempt 1: Immediate play
+        const attemptPlay = async () => {
+            try {
+                video.muted = true; // Ensure muted before play
+                await video.play();
+                setHasInteracted(true);
+            } catch (error) {
+                console.log('Initial autoplay blocked:', error);
+                // Fallback to intersection observer
+            }
+        };
+
+        // Attempt 2: Play when in viewport
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting && !hasInteracted) {
+                        video.play().then(() => {
+                            setHasInteracted(true);
+                        }).catch((err) => {
+                            console.log('Intersection autoplay blocked:', err);
+                        });
+                    }
+                });
+            },
+            { threshold: 0.5 } // Play when 50% visible
+        );
+
+        attemptPlay();
+        observer.observe(video);
+
+        return () => {
+            observer.disconnect();
+        };
+    }, [backgroundVideo, hasInteracted]);
+
     return (
         <section className="hero-section">
             {/* Background Media */}
             <div className="hero-background">
                 {backgroundVideo ? (
                     <video
+                        ref={videoRef}
                         autoPlay
                         loop
                         muted
                         playsInline
+                        webkitPlaysInline
                         preload="auto"
                         disablePictureInPicture
-                        controls={false}
+                        poster={backgroundImage}
                         className="hero-video"
                     >
                         <source src={backgroundVideo} type="video/mp4" />
