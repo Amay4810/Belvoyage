@@ -26,18 +26,15 @@
 
 .hero-video {
     pointer-events: none;
-    /* Prevents clicking to pause */
 }
 
-/* Hide native play button on WebKit browsers (iOS Safari) */
-.hero-video::-webkit-media-controls-start-playback-button {
-    display: none !important;
-    -webkit-appearance: none;
-}
+/* ===== CRITICAL: Hide native video controls across ALL browsers ===== */
 
-/* Hide all native video controls */
+/* WebKit browsers (Safari, iOS Safari, Chrome on iOS) */
 .hero-video::-webkit-media-controls {
     display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
 }
 
 .hero-video::-webkit-media-controls-enclosure {
@@ -48,7 +45,27 @@
     display: none !important;
 }
 
-.hero-video::-webkit-media-controls-panel {
+.hero-video::-webkit-media-controls-start-playback-button {
+    display: none !important;
+    -webkit-appearance: none !important;
+}
+
+.hero-video::-webkit-media-controls-play-button {
+    display: none !important;
+}
+
+/* Firefox */
+.hero-video::-moz-media-controls {
+    display: none !important;
+}
+
+/* Microsoft Edge */
+.hero-video::-ms-media-controls {
+    display: none !important;
+}
+
+/* Ensure video never shows controls */
+.hero-video::cue {
     display: none !important;
 }
 

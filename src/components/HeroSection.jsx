@@ -66,9 +66,11 @@ const HeroSection = ({
                         loop
                         muted
                         playsInline
-                        webkitPlaysInline
+                        webkit-playsinline="true"
                         preload="auto"
                         disablePictureInPicture
+                        disableRemotePlayback
+                        x5-playsinline="true"
                         poster={backgroundImage}
                         className="hero-video"
                     >
