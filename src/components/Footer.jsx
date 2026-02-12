@@ -34,6 +34,8 @@ const Footer = () => {
 
                     <div className="footer-col">
                         <h4>Contact</h4>
+                        <a href="tel:+919319320069">Call: +91 93193 20069</a>
+                        <a href="https://wa.me/919319320069">WhatsApp</a>
                         <a href="mailto:concierge@thebelvoyage.com">concierge@thebelvoyage.com</a>
                         <p>New Delhi, India</p>
                     </div>

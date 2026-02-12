@@ -85,7 +85,7 @@ const Home = () => {
                     <p className="philosophy-statement">
                         BelVoyage does not aim to show clients the world.
                     </p>
-                    <p className="philosophy-emphasis">
+                    <p className="philosophy-statement">
                         It aims to help them <span className="highlight">EXPERIENCE</span> it differently.
                     </p>
                 </div>

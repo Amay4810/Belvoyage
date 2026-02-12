@@ -30,6 +30,31 @@
     color: var(--color-text-secondary);
 }
 
+/* Philosophy Section */
+.philosophy-section {
+    background-color: var(--color-bg-primary);
+    text-align: center;
+}
+
+.philosophy-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.philosophy-statement {
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    font-weight: 300;
+    line-height: 1.6;
+    color: var(--color-text-primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.philosophy-statement .highlight {
+    color: var(--color-accent-gold);
+    font-weight: 400;
+    letter-spacing: 0.05em;
+}
+
 /* Indented blocks for visual hierarchy */
 .opening-content .indented-block {
     margin-left: 4rem;
@@ -107,6 +132,19 @@
     text-align: center;
     background-color: var(--color-bg-primary);
     padding: var(--spacing-xxl) 0;
+}
+
+.cta-section h2 {
+    color: var(--color-text-primary);
+    margin-bottom: var(--spacing-lg);
+}
+
+.cta-subtitle {
+    font-size: 1.1rem;
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.8;
+    color: var(--color-text-secondary);
 }
 
 .cta-section h3 {

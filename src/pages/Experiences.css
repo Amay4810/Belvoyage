@@ -21,6 +21,11 @@
     margin-right: auto;
 }
 
+.experiences-hero h1 {
+    color: var(--color-accent-gold);
+    margin-bottom: var(--spacing-md);
+}
+
 .experiences-hero-title {
     color: var(--color-accent-gold);
     margin-bottom: var(--spacing-md);
