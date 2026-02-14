@@ -60,22 +60,26 @@ const HeroSection = ({
             {/* Background Media */}
             <div className="hero-background">
                 {backgroundVideo ? (
-                    <video
-                        ref={videoRef}
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
-                        webkit-playsinline="true"
-                        preload="auto"
-                        disablePictureInPicture
-                        disableRemotePlayback
-                        x5-playsinline="true"
-                        poster={backgroundImage}
-                        className="hero-video"
-                    >
-                        <source src={backgroundVideo} type="video/mp4" />
-                    </video>
+                    <>
+                        <video
+                            ref={videoRef}
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            webkit-playsinline="true"
+                            preload="auto"
+                            disablePictureInPicture
+                            disableRemotePlayback
+                            x5-playsinline="true"
+                            poster={backgroundImage}
+                            className="hero-video"
+                        >
+                            <source src={backgroundVideo} type="video/mp4" />
+                        </video>
+                        {/* Invisible overlay to block any play button */}
+                        <div className="video-overlay-blocker"></div>
+                    </>
                 ) : (
                     <div
                         className="hero-image"
