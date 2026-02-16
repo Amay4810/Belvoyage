@@ -12,6 +12,7 @@ const Home = () => {
                 ctaText="Request a Private Consultation"
                 ctaLink="/consultation"
                 backgroundVideo="/video.mp4"
+                backgroundImage="/poster.jpeg"
             />
 
             {/* Opening Statement Section */}

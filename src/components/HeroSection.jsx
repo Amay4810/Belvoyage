@@ -13,47 +13,29 @@ const HeroSection = ({
     backgroundVideo
 }) => {
     const videoRef = useRef(null);
-    const [hasInteracted, setHasInteracted] = useState(false);
+    const [autoplayFailed, setAutoplayFailed] = useState(false);
 
     useEffect(() => {
         const video = videoRef.current;
         if (!video || !backgroundVideo) return;
 
-        // Attempt 1: Immediate play
-        const attemptPlay = async () => {
-            try {
-                video.muted = true; // Ensure muted before play
-                await video.play();
-                setHasInteracted(true);
-            } catch (error) {
-                console.log('Initial autoplay blocked:', error);
-                // Fallback to intersection observer
-            }
-        };
+        // Ensure video is muted and attempt autoplay
+        video.muted = true;
+        const playPromise = video.play();
 
-        // Attempt 2: Play when in viewport
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting && !hasInteracted) {
-                        video.play().then(() => {
-                            setHasInteracted(true);
-                        }).catch((err) => {
-                            console.log('Intersection autoplay blocked:', err);
-                        });
-                    }
+        if (playPromise !== undefined) {
+            playPromise
+                .then(() => {
+                    // Autoplay successful - video plays
+                    setAutoplayFailed(false);
+                })
+                .catch((error) => {
+                    // Autoplay blocked - hide video, show poster
+                    console.log('Autoplay blocked, showing poster:', error);
+                    setAutoplayFailed(true);
                 });
-            },
-            { threshold: 0.5 } // Play when 50% visible
-        );
-
-        attemptPlay();
-        observer.observe(video);
-
-        return () => {
-            observer.disconnect();
-        };
-    }, [backgroundVideo, hasInteracted]);
+        }
+    }, [backgroundVideo]);
 
     return (
         <section className="hero-section">
@@ -72,13 +54,19 @@ const HeroSection = ({
                             disablePictureInPicture
                             disableRemotePlayback
                             x5-playsinline="true"
-                            poster={backgroundImage}
                             className="hero-video"
+                            style={{ display: autoplayFailed ? 'none' : 'block' }}
                         >
                             <source src={backgroundVideo} type="video/mp4" />
                         </video>
-                        {/* Invisible overlay to block any play button */}
-                        <div className="video-overlay-blocker"></div>
+
+                        {/* Poster fallback when autoplay fails */}
+                        {autoplayFailed && backgroundImage && (
+                            <div
+                                className="hero-poster-fallback"
+                                style={{ backgroundImage: `url(${backgroundImage})` }}
+                            />
+                        )}
                     </>
                 ) : (
                     <div
