@@ -172,3 +172,200 @@
         padding: var(--spacing-lg) 0;
     }
 }
+
+/* ===== Signature Experiences Carousel ===== */
+
+.experience-tiles .section-title {
+    margin-bottom: var(--spacing-md);
+}
+
+/* Premium page counter: "01 / 02" */
+.carousel-counter {
+    text-align: right;
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    color: rgba(196, 196, 184, 0.5);
+    margin-bottom: var(--spacing-md);
+    user-select: none;
+}
+
+.carousel-counter-current {
+    color: var(--color-accent-gold);
+    font-weight: 500;
+}
+
+/* Root container */
+.carousel-root {
+    position: relative;
+    outline: none;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.carousel-root.is-dragging {
+    cursor: grabbing;
+}
+
+/* ── Clip window ── */
+.carousel-track-wrapper {
+    overflow: hidden;
+    position: relative;
+}
+
+/* ── Track: transform is set inline in JSX ── */
+.carousel-track {
+    display: flex;
+    will-change: transform;
+    /* Cinematic premium ease — matches the progress bar */
+    transition: transform 0.9s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+/* ── Slides: 1 per view on all screens ── */
+.carousel-slide {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+
+    /* Inactive: dim + subtle pull-back */
+    opacity: 0.35;
+    transform: scale(0.97);
+    filter: brightness(0.6);
+
+    transition:
+        opacity 0.7s cubic-bezier(0.76, 0, 0.24, 1),
+        transform 0.7s cubic-bezier(0.76, 0, 0.24, 1),
+        filter 0.7s ease;
+
+    pointer-events: none;
+}
+
+/* Active slide: full brightness and scale */
+.carousel-slide.is-active {
+    opacity: 1;
+    transform: scale(1);
+    filter: brightness(1);
+    pointer-events: auto;
+}
+
+/* ── Navigation Arrows ── */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 52px;
+    height: 52px;
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    background: rgba(10, 10, 10, 0.55);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    color: var(--color-accent-gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+        box-shadow 0.3s ease,
+        opacity 0.3s ease;
+}
+
+.carousel-btn:hover:not(:disabled) {
+    background: rgba(212, 175, 55, 0.1);
+    border-color: var(--color-accent-gold);
+    box-shadow: 0 0 24px rgba(212, 175, 55, 0.25), inset 0 0 12px rgba(212, 175, 55, 0.06);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-btn:active:not(:disabled) {
+    transform: translateY(-50%) scale(0.93);
+    transition-duration: 0.1s;
+}
+
+.carousel-btn:disabled {
+    opacity: 0.2;
+    cursor: default;
+    border-color: rgba(196, 196, 184, 0.15);
+    color: rgba(196, 196, 184, 0.3);
+}
+
+.carousel-btn--prev {
+    left: -26px;
+}
+
+.carousel-btn--next {
+    right: -26px;
+}
+
+@media (max-width: 768px) {
+    .carousel-btn--prev {
+        left: 8px;
+    }
+
+    .carousel-btn--next {
+        right: 8px;
+    }
+
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* ── Dot Indicators ── */
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: var(--spacing-lg);
+}
+
+.carousel-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(196, 196, 184, 0.25);
+    cursor: pointer;
+    padding: 0;
+    transition:
+        background 0.4s ease,
+        transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+        box-shadow 0.4s ease,
+        width 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+        border-radius 0.4s ease;
+}
+
+/* Active dot morphs into a gold pill */
+.carousel-dot.is-active {
+    background: var(--color-accent-gold);
+    width: 24px;
+    border-radius: 3px;
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.45);
+}
+
+.carousel-dot:hover:not(.is-active) {
+    background: rgba(196, 196, 184, 0.6);
+    transform: scale(1.4);
+}
+
+/* ── Progress Bar ── */
+.carousel-progress {
+    height: 1px;
+    background: rgba(196, 196, 184, 0.1);
+    margin-top: var(--spacing-md);
+    overflow: hidden;
+    border-radius: 1px;
+}
+
+.carousel-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--color-accent-bronze), var(--color-accent-gold));
+    /* Matches track transition for synchronized feel */
+    transition: width 0.9s cubic-bezier(0.76, 0, 0.24, 1);
+    border-radius: 1px;
+}
