@@ -45,29 +45,6 @@ From monastic Himalayan kingdoms to Japan's ceremonial worlds, Asia reveals itse
                         />
 
                         <ExperienceCard
-                            title="Bespoke Celebrations"
-                            description="Anniversaries, milestones, and deeply personal moments deserve journeys designed to be remembered long after they end.
-
-BelVoyage creates celebrations that are intimate, cinematic, and layered with meaning — experiences that live on as memory, not itinerary."
-                            ctaText="Design a Celebration"
-                            ctaLink="/consultation"
-                            image="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=2069&auto=format&fit=crop"
-                            id="bespoke-celebrations"
-                        />
-
-                        <ExperienceCard
-                            title="Once in a Lifetime Journeys"
-                            description="Some journeys are created simply because they can be.
-
-Rare access. Unrepeatable moments. Journeys that exist once and remain unforgettable."
-                            ctaText="Begin a Private Conversation"
-                            ctaLink="/consultation"
-                            image="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2940&auto=format&fit=crop"
-                            reverse={true}
-                            id="once-in-a-lifetime"
-                        />
-
-                        <ExperienceCard
                             title="Desert & Wilderness"
                             description="Silence, scale, and presence.
 
@@ -90,6 +67,29 @@ From the Maldives to Croatia's pristine coastlines, BelVoyage curates island exp
                             image="https://images.unsplash.com/photo-1559827260-dc66d52bef19?q=80&w=2940&auto=format&fit=crop"
                             reverse={true}
                             id="island-sanctuaries"
+                        />
+
+                        <ExperienceCard
+                            title="Once in a Lifetime Journeys"
+                            description="Some journeys are created simply because they can be.
+
+Rare access. Unrepeatable moments. Journeys that exist once and remain unforgettable."
+                            ctaText="Begin a Private Conversation"
+                            ctaLink="/consultation"
+                            image="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2940&auto=format&fit=crop"
+                            id="once-in-a-lifetime"
+                        />
+
+                        <ExperienceCard
+                            title="Bespoke Celebrations"
+                            description="Anniversaries, milestones, and deeply personal moments deserve journeys designed to be remembered long after they end.
+
+BelVoyage creates celebrations that are intimate, cinematic, and layered with meaning — experiences that live on as memory, not itinerary."
+                            ctaText="Design a Celebration"
+                            ctaLink="/consultation"
+                            image="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=2069&auto=format&fit=crop"
+                            reverse={true}
+                            id="bespoke-celebrations"
                         />
                     </div>
                 </div>

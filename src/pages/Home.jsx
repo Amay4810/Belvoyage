@@ -19,18 +19,6 @@ const TILES = [
         link: "/experiences#rare-asia",
     },
     {
-        title: "Bespoke Celebrations",
-        description: "Anniversaries, milestones, and deeply personal moments — intimate, cinematic, unforgettable.",
-        image: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=2069&auto=format&fit=crop",
-        link: "/experiences#bespoke-celebrations",
-    },
-    {
-        title: "Once in a Lifetime Journeys",
-        description: "Rare access. Unrepeatable moments. Journeys that exist once and remain unforgettable.",
-        image: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2940&auto=format&fit=crop",
-        link: "/experiences#once-in-a-lifetime",
-    },
-    {
         title: "Desert & Wilderness",
         description: "Silence, scale, and presence. From the Thar Desert to East Africa's vast landscapes.",
         image: "https://images.unsplash.com/photo-1509316785289-025f5b846b35?q=80&w=2940&auto=format&fit=crop",
@@ -41,6 +29,18 @@ const TILES = [
         description: "Privacy, architecture, and the quiet luxury of isolation — from the Maldives to Croatia.",
         image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?q=80&w=2940&auto=format&fit=crop",
         link: "/experiences#island-sanctuaries",
+    },
+    {
+        title: "Once in a Lifetime Journeys",
+        description: "Rare access. Unrepeatable moments. Journeys that exist once and remain unforgettable.",
+        image: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2940&auto=format&fit=crop",
+        link: "/experiences#once-in-a-lifetime",
+    },
+    {
+        title: "Bespoke Celebrations",
+        description: "Anniversaries, milestones, and deeply personal moments — intimate, cinematic, unforgettable.",
+        image: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=2069&auto=format&fit=crop",
+        link: "/experiences#bespoke-celebrations",
     },
 ];
 
